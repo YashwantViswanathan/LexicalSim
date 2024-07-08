@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lexical Similarity</title>
+</head>
+<body>
+    <h1>Lexical Similarity Calculator</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Calculate Similarity</button>
+    </form>
+
+    {% if similarity_score is not None %}
+        <h2>Results</h2>
+        <p>Cosine Similarity: {{ similarity_score }}</p>
+        <p>Matching Words: {{ match_words|join:", " }}</p>
+    {% endif %}
+</body>
+</html>
