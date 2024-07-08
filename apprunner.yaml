@@ -5,7 +5,7 @@ build:
     pre-build:
       - n 14.18.3
     build:
-      - pip install -r requirements.txt
+      - pip3 install -r requirements.txt
 run:
   runtime-version: 3.8.16
   command: sh startup.sh
